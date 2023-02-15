@@ -24,9 +24,7 @@ public class VentanaLogin extends JFrame {
 	private JTextField tfUsuario;
 	private JPasswordField pfPassword;
 
-	/**
-	 * Launch the application.
-	 */
+
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -40,9 +38,6 @@ public class VentanaLogin extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
 	public VentanaLogin() {
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -81,7 +76,7 @@ public class VentanaLogin extends JFrame {
 				if(clientesService.existe(tfUsuario.getText(), pfPassword.getText())) {
 					//creamos la ventana de libros y le pasamos la lista de libros
 					//para que los muestre
-					new VentanaLibros(librosService.libros());
+					new VentanaConsultaLibros(librosService.temas());
 				}else {
 					JOptionPane.showMessageDialog(VentanaLogin.this, "Usuario no válido");
 				}

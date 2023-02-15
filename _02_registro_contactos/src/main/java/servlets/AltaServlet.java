@@ -12,9 +12,6 @@ import model.Contacto;
 import service.ContactosService;
 import service.ContactosServiceFactory;
 
-/**
- * Servlet implementation class AltaServlet
- */
 @WebServlet("/AltaServlet")
 public class AltaServlet extends HttpServlet {
 	
